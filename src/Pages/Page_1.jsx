@@ -17,9 +17,6 @@ export const Page_1 = () => {
   gsap.fromTo(textRef.current,{y:200,opacity:0},{y:0,opacity:1,duration:1})
   gsap.fromTo(circleRef.current,{y:200,opacity:0},{y:0,opacity:1,duration:1})
   
-  if (window.MorphSVGPlugin) {
-    gsap.registerPlugin(window.MorphSVGPlugin);
-  }
 
    const tl = gsap.timeline({
     scrollTrigger:{
@@ -38,15 +35,6 @@ export const Page_1 = () => {
    .fromTo(textRef_2.current, {x: 0, opacity:0},{ x: 500, opacity:1, duration: 1 })
 
 
-  },[])
-  useEffect(() => {
-    gsap.to(blob1.current, {
-        duration: 2,
-        morphSVG: blob2.current,
-        ease: "power1.inOut",
-        repeat: -1,
-        yoyo: true
-      });
   },[])
     return (
     <>
